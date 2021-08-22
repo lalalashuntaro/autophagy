@@ -13,8 +13,6 @@
 
     <p>終了時刻 : {{$result}}</p>
 
-    <p>{{$error}}</p>
-
     <a href="/">時間入力画面へ戻る</a>
 </body>
 </html>

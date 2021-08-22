@@ -15,11 +15,18 @@
 
     <p>開始時間を入力してください</p>
 
-    <form action="/hello" method="get">
+    <form action="/hello" method="post">
         @csrf
         <input type="time" name="numeric">
         <button>数値計算</button>
     </form>
 
+    @if ($errors)
+    <div>
+        @foreach ($errors -> all() as $error)
+            {{$error}}
+        @endforeach
+    </div>
+    @endif
 </body>
 </html>

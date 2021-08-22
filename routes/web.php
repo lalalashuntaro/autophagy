@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'App\Http\Controllers\MainController@index');
 
-Route::get('hello', 'App\Http\Controllers\MainController@answer');
+Route::post('hello', 'App\Http\Controllers\MainController@answer');
