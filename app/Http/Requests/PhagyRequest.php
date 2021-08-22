@@ -13,8 +13,7 @@ class PhagyRequest extends FormRequest
      */
     public function authorize()
     {
-        if ($this->path() == 'hello')
-        {
+        if ($this->path() === 'hello'){
             return true;
         } else {
             return false;

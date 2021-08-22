@@ -17,7 +17,9 @@ class MainController extends Controller
         // １６時間後↓
         $objDateTime = new DateTime('+16 hours');
         $endtimes = ['endtime' => $objDateTime->format('m-d H:i')];
-        return view('phagy', $endtimes, $today);
+        return view('phagy')
+                    ->with($endtimes)
+                    ->with($today);
     }
 
     public function answer(Request $request)
@@ -27,8 +29,7 @@ class MainController extends Controller
             'numeric' => 'date_format:H:i'
         ]);
 
-        if ($validator->fails())
-        {
+        if ($validator->fails()) {
             return redirect('/')
                         ->withErrors($validator)
                         ->withInput();

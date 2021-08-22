@@ -17,16 +17,14 @@
 
     <form action="/hello" method="post">
         @csrf
-        <input type="time" name="numeric">
+        <input type="time" name="numeric" required>
         <button>数値計算</button>
     </form>
 
     @if ($errors)
-    <div>
         @foreach ($errors -> all() as $error)
             {{$error}}
         @endforeach
-    </div>
     @endif
 </body>
 </html>
