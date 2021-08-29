@@ -8,6 +8,8 @@
 
     <p>終了時刻 : {{$result}}</p>
 
-    <a href="/">時間入力画面へ戻る</a>
+    <div class="back-bottom">
+        <a href="/">時間入力画面へ戻る</a>
+    </div>
 
 @endsection

@@ -1,2 +1,3 @@
-
-<p>{{$footer}}</p>
+<div class="footer-logo">
+    {{$footer}}
+</div>
