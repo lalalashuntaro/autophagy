@@ -29,7 +29,8 @@ class MainController extends Controller
             'numeric' => 'date_format:H:i'
         ]);
 
-        if ($validator->fails()) {
+        if ($validator->fails())
+        {
             return redirect('/')
                         ->withErrors($validator)
                         ->withInput();
